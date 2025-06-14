@@ -1,0 +1,112 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+  color: #f9fafb;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Smooth background transition */
+  transition: background 0.5s;
+}
+
+/* Ensure the root container uses full width */
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main form container */
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 2.5rem 2rem;
+  background: rgba(31, 41, 55, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 41, 55, 0.37), 0 1.5px 8px 0 rgba(37, 99, 235, 0.15);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  backdrop-filter: blur(4px);
+  border: 1.5px solid rgba(37, 99, 235, 0.15);
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #60a5fa;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+/* Inputs, dropdowns, and buttons */
+input, select, button {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5rem 0;
+  font-size: 1.08rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+/* Form input styles */
+input, select {
+  width: 100%;
+  background: #374151;
+  color: #f9fafb;
+  border: 1.5px solid #4b5563;
+  box-shadow: 0 1px 4px 0 rgba(31, 41, 55, 0.10);
+}
+
+input:focus, select:focus {
+  border: 1.5px solid #2563eb;
+  box-shadow: 0 0 0 2px #2563eb33;
+}
+
+/* Button styles */
+button {
+  background: linear-gradient(90deg, #2563eb 0%, #60a5fa 100%);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.10);
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+    border-radius: 16px;
+    max-width: 98vw;
+  }
+  input, select, button {
+    font-size: 0.98rem;
+    padding: 10px 10px;
+  }
+}
